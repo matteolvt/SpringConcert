@@ -409,6 +409,16 @@ footer {
         max-width: 100%; /* Utilisation maximale de l'espace disponible */
     }
 
+    .down-arrow-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px; 
+    }
+
+    .down-arrow {
+        width: 150px;
+    }
+
     .text {
         margin-top:10px;
         color:white;
@@ -430,7 +440,7 @@ footer {
         max-width: 400px; /* Limitation de la largeur maximale */
         height: 80px; /* Ajustement de la hauteur */
         font-size: 1.5em;
-        padding:10px;  /* Ajustement de la taille de la police */
+        padding:20px;  /* Ajustement de la taille de la police */
     }
 
     #long-text {
