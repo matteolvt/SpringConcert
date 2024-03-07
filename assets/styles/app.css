@@ -1,3 +1,511 @@
+@font-face {
+    font-family: 'Gotham-Black'; 
+    src: url('../fonts/Gotham-Black.otf') format('opentype'); 
+ 
+}
+
+* {
+    margin:0;
+    padding:0; 
+}
+
 body {
-    background-color: skyblue;
+    background-image: url('../img/98.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    font-family: "Dela Gothic One", sans-serif;
+}
+
+
+header {
+    background-color:rgb(217, 217, 217, 0.1);
+    display: flex;
+}
+
+nav  {
+    width: 100%;
+    padding-left: 20px;
+    padding-top:5px; 
+    padding-bottom:5px; 
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    color: white;
+}
+
+.nav-pics {
+    display: flex;
+    align-items: center;
+}
+
+.nav_link {
+    /* position: absolute; */
+    margin-right: 350px;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; 
+    font-size: 1.8em;
+}
+
+.nav_link a {
+    margin: 0 30px;
+    text-decoration: none;
+    color: white;   
+}
+
+.nav-pics img{
+    margin-right: 10px;
+    padding-top:20px; 
+    height: 150px;
+    width: 150px;
+    margin-bottom:20px; 
+}
+
+#underline {
+    text-decoration: underline;
+}
+
+.check{
+    display: none;
+}
+
+h1 {
+    color:white; 
+    text-align: center;
+    margin:100px; 
+    font-size: 5.5em;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh;  */
+    margin: 0 auto;
+}
+
+.countdown {
+    font-size: 5em;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.countdown-background {
+    width: 90%; /* Adaptatif à la taille de l'écran avec un maximum de 900px */
+    max-width: 900px; /* Ajustez cette valeur si nécessaire */
+    height: 200px;
+    background-color: rgba(217, 217, 217, 0.33);
+    z-index: -1;
+    border-radius: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texte p {
+    color:white; 
+    text-align: center;
+    margin-top:150px; 
+    font-size:1.5em; 
+}
+
+#show-more-btn {
+    display: none;
+}
+
+.carousel-container {
+    margin-top:120px; 
+    margin-bottom: 50px; 
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* IMAGE */
+.image-container {
+    overflow-x: hidden;
+    max-width: 768px;
+}
+.image-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
+    grid-gap: 1.5rem;
+    position: relative;
+    left: 0;
+    transition: .3s;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: .5rem;
+}
+/* IMAGE */
+
+
+.down-arrow-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+}
+
+
+.down-arrow {
+    width: 300px;
+}
+
+.text {
+    margin-top:10px;
+    color:white;
+    text-align: center;
+    font-size: 1.7em;
+}
+
+
+
+.shop-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom:450px;
+}
+
+
+.shop-btn-container button {
+    font-family: "Dela Gothic One", sans-serif;
+    background-color: rgb(46, 31, 31, 0.75);
+    color:white;
+    border: none;
+    border-radius:30px;
+    width: 1000px;
+    height: 175px;
+    font-size: 3.8em;
+}
+
+footer {
+    background-color:rgb(217, 217, 217, 0.1);
+    display: flex;
+    color:white;
+}
+
+
+.footer-pics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-pics img {
+    margin-left: 30px;
+    margin-bottom:20px;
+    padding-top:20px; 
+    height: 120px;
+    width: 120px;
+}
+
+.footer-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    margin-left:580px;  
+}
+
+.footer-text a {
+    text-decoration: none;
+    color:white; 
+    margin-left:30px;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour la section de liens dans le footer */
+.footer-links {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left:600px;
+}
+
+/* Styles pour le titre "Nous contacter" */
+.footer-links h3 {
+    margin-bottom: 10px;
+    font-size:1.5em; /* Marge en bas pour l'espace */
+}
+
+/* Styles pour la section de contact (logo Instagram et nom d'utilisateur) */
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles pour le logo Instagram */
+.contact-info img {
+    width: 40px; /* Ajustez la taille selon votre besoin */
+    height: 40px; /* Ajustez la taille selon votre besoin */
+    margin-right: 10px; 
+}
+
+.contact-info a {
+    text-decoration: none;
+    color:white;
+}
+
+.contact-info2 {
+    margin-right: 10px; 
+    display: flex;
+    align-items: center;
+    
+}
+
+/* Styles pour le logo Instagram */
+.contact-info2 img {
+    padding-right:12px;
+    width: 40px; /* Ajustez la taille selon votre besoin */
+    height: 40px; /* Ajustez la taille selon votre besoin */
+    margin-right: 5px; 
+}
+
+.contact-info2 a {
+    text-decoration: none;
+    color:white;
+}
+
+.shopping {
+    margin-top:50px;
+}
+
+.nav-toggle {
+    display: none; /* Caché par défaut */
+}
+
+
+/* Ajout de styles pour les écrans de taille inférieure à 768px (téléphones) */
+/* CSS global */
+/* Ajout du media query pour les écrans de largeur maximale de 768px */
+@media only screen and (max-width: 768px) {
+    /* Styles de base */
+    *,
+    *::after,
+    *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+    body {
+        background-image: url('../img/98.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        font-family: "Dela Gothic One", sans-serif;
+        color: white; /* Ajout de la couleur de police par défaut */
+    }
+
+    /* Header */
+    header {
+        display:none;
+    }
+
+
+    h1 {
+        text-align: center; 
+        font-size: 1.3em; 
+        
+    }
+
+    h1 span {
+        font-size: 2em;
+    }
+    
+
+    nav  {
+        padding: 5px 0; /* Ajustement de l'espacement */
+        display: flex;
+        justify-content: space-between; /* Espace uniforme entre les éléments */
+    }
+
+    .nav_link {
+        font-size: 1.5em; 
+    }
+
+    .nav_link a {
+        text-decoration: none;
+        color: white;   
+    }
+
+    .nav-pics img{
+        height: 100px; /* Ajustement de la taille des images */
+        width: 100px; /* Ajustement de la taille des images */
+        margin-bottom: 10px; /* Espacement entre les images */
+    }
+    
+    /* Contenu principal */
+    .container {
+        position: relative; /* Modification de la position pour centrer le contenu */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 50px; /* Ajustement de la marge supérieure */
+        text-align: center; /* Centrage du contenu */
+        max-width: 90%; /* Limite la largeur du conteneur */
+        margin-left: auto; /* Centre le conteneur horizontalement */
+        margin-right: auto; /* Centre le conteneur horizontalement */
+    }
+
+    .container {
+        display: flex; /* Utiliser flexbox pour centrer les éléments */
+        justify-content: center;
+        margin-right:40px; 
+    }
+    
+    .countdown {
+        font-size: 1.5em; /* Ajustement de la taille de la police */
+    }
+    
+    .countdown-background {
+        width: 80%; /* Ajustement de la largeur du fond */
+        max-width: 600px; /* Limitation de la largeur maximale */
+        height: 90px; /* Ajustement de la hauteur du fond */
+        border-radius: 20px;
+    }
+    
+    
+
+    .texte p {
+        margin-top: 50px; /* Ajustement de la marge supérieure */
+        font-size: 1.2em; 
+        margin-left:20px;
+        margin-right:20px;
+    }
+
+    .carousel-container {
+        margin-top: 50px; /* Ajustement de la marge supérieure */
+        margin-bottom: 20px; /* Ajustement de la marge inférieure */
+        display: flex;
+        justify-content: center; 
+        margin-left: 20px;
+        margin-right: 20px; /* Centrage horizontal */
+    }
+
+    .image-container {
+        overflow-x: hidden;
+        max-width: 100%; /* Utilisation maximale de l'espace disponible */
+    }
+
+    .text {
+        margin-top:10px;
+        color:white;
+        text-align: center;
+        font-size: 1.2em;
+        margin-left:20px;
+        margin-right:20px;
+    }
+    /* Bouton de shopping */
+    .shop-btn-container {
+        margin-top: 50px; /* Ajustement de la marge supérieure */
+        margin-bottom: 100px; /* Ajustement de la marge inférieure */
+        display: flex;
+        justify-content: center; /* Centrage horizontal */
+    }
+
+    .shop-btn-container button {
+        width: 100%; /* Ajustement de la largeur */
+        max-width: 400px; /* Limitation de la largeur maximale */
+        height: 80px; /* Ajustement de la hauteur */
+        font-size: 1.5em;
+        padding:10px;  /* Ajustement de la taille de la police */
+    }
+
+    #long-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-height: 2em; /* Hauteur initiale pour couper le texte */
+        transition: max-height 0.3s ease, padding-top 0.3s ease; /* Transition pour l'animation */
+        padding-top: 0; /* Supprime l'espacement initial */
+    }
+    
+    #show-more-btn {
+        margin-top:10px; 
+        margin-left:10px;
+        color:white;  
+        background-color:rgb(217, 217, 217, 0.33); 
+        border:none; 
+        border-radius: 20px;
+        width: 100px;
+    }
+    
+    .texte.expanded #long-text {
+        max-height: 1000px; /* Hauteur maximale pour afficher tout le texte */
+        padding-top: 10px; /* Espacement pour séparer le texte du bouton */
+        white-space: normal; /* Affiche le texte sur plusieurs lignes */
+    }
+    
+    
+    
+    /* Footer */
+    footer {
+        display: none;
+    }
+
+    .footer-pics img {
+        height: 80px; /* Ajustement de la taille des images */
+        width: 80px; /* Ajustement de la taille des images */
+        margin-bottom: 10px; /* Espacement entre les images */
+    }
+
+    .footer-text {
+        font-size: 1.2em; /* Ajustement de la taille de la police */
+        margin-bottom: 20px; /* Ajustement de la marge inférieure */
+    }
+
+    /* Styles pour la section de liens dans le footer */
+    .footer-links {
+        font-size: 1.2em; /* Ajustement de la taille de la police */
+        margin-top: 20px; /* Ajustement de la marge supérieure */
+    }
+
+    /* Styles pour le titre "Nous contacter" */
+    .footer-links h3 {
+        margin-bottom: 10px;
+    }
+
+    /* Styles pour la section de contact (logo Instagram et nom d'utilisateur) */
+    .contact-info {
+        align-items: center;
+    }
+
+    .contact-info img {
+        width: 30px; /* Ajustez la taille selon votre besoin */
+        height: 30px; /* Ajustez la taille selon votre besoin */
+        margin-right: 5px; 
+    }
+
+    .contact-info2 img {
+        width: 30px; /* Ajustez la taille selon votre besoin */
+        height: 30px; /* Ajustez la taille selon votre besoin */
+        margin-right: 5px; 
+    }
+
+    .shopping {
+        margin-top: 20px; /* Ajustement de la marge supérieure */
+    }
+
 }

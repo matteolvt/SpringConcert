@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SpringConcert
+{% endblock %}
+
+{% block body %}
+
+	<header>
+		<nav>
+			<div class="nav-pics">
+				<img src="img/LOGOS/spring-concert.png" alt="SpringConcert">
+				<p>X</p>
+				<img src="img/LOGOS/DEATHLESS-RECORDS.png" alt="DeathlessRecords" style="transform: rotate(180deg); margin-top:20px;">
+			</div>
+			<div class="nav_link">
+				<a href="#" id="underline">ACCUEIL</a>
+				<a href="#">ARTISTES</a>
+				<a href="#">BILLETERIE</a>
+			</div>
+		</nav>
+	</header>
+
+
+	<h1>
+		<span>Bistrot de la Scène</span>
+		<br>
+		27 Avril 2024
+	</h1>
+
+	<div class="container">
+		<div class="countdown-background">
+			<div id="countdown" class="countdown"></div>
+		</div>
+	</div>
+
+	<div class="texte">
+		<p id="long-text">Le "Spring Concert", un événement phare en soutien aux artistes dijonnais, revient pour sa deuxième
+			<br>
+			édition le 27 avril 2024 au Bistrot de la scène à Dijon. Organisé par Lorys Ledoux, également connu
+			<br>
+			sous le nom de Syrol, le directeur du label associatif indépendant Deathless Record, cet événement
+			<br>
+			promet une soirée inoubliable mettant en vedette certains des talents les plus prometteurs de la scène
+			<br>
+			locale.</p>
+		<button id="show-more-btn">En savoir plus</button>
+	</div>
+
+	<div class="carousel-container">
+		<div class="image-container">
+			<div class="image-wrapper">
+				<div>
+					<img src="img/AFFICHES/affiche-r1luv.png" alt="">
+				</div>
+				<div>
+					<img src="img/AFFICHES/vf-affiche-seven-zeno.png" alt="">
+				</div>
+				<div>
+					<img src="img/AFFICHES/v1.1-affiche-siiré.png" alt="">
+				</div>
+				<div>
+					<img src="img/AFFICHES/v1.2-affiche-akuro.png" alt="">
+				</div>
+				<div>
+					<img src="img/AFFICHES/v2.1-affiche-iliana.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="down-arrow-container">
+		<div class="down-arrow">
+			<img src="img/white-down-arrow.png" alt="down-arrow">
+		</div>
+	</div>
+
+
+	<div class="text">
+		<h2>Réservez vos places dès maintenant !</h2>
+	</div>
+
+	<div class="shop-btn-container">
+		<a href="{{ path('shop') }}" target="_blank">
+			<button type=" button">ACHETER</button>
+		</a>
+	</div>
+{% endblock %}
