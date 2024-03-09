@@ -99,13 +99,4 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   var navToggle = document.querySelector('.nav-toggle');
-//   var navLinks = document.querySelector('.nav_links');
-
-//   // Ajoute un écouteur d'événements au clic sur le menu hamburger
-//   navToggle.addEventListener('click', function() {
-//       navLinks.classList.toggle('show'); // Affiche/cache les liens de navigation
-//   });
-// });
 

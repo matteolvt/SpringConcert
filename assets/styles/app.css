@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'Gotham-Black'; 
-    src: url('../fonts/Gotham-Black.otf') format('opentype'); 
- 
-}
-
 * {
     margin:0;
     padding:0; 
@@ -96,8 +90,8 @@ h1 {
 }
 
 .countdown-background {
-    width: 90%; /* Adaptatif à la taille de l'écran avec un maximum de 900px */
-    max-width: 900px; /* Ajustez cette valeur si nécessaire */
+    width: 90%; 
+    max-width: 900px; 
     height: 200px;
     background-color: rgba(217, 217, 217, 0.33);
     z-index: -1;
@@ -246,7 +240,7 @@ footer {
 /* Styles pour le titre "Nous contacter" */
 .footer-links h3 {
     margin-bottom: 10px;
-    font-size:1.5em; /* Marge en bas pour l'espace */
+    font-size:1.5em; 
 }
 
 /* Styles pour la section de contact (logo Instagram et nom d'utilisateur) */
@@ -257,8 +251,8 @@ footer {
 
 /* Styles pour le logo Instagram */
 .contact-info img {
-    width: 40px; /* Ajustez la taille selon votre besoin */
-    height: 40px; /* Ajustez la taille selon votre besoin */
+    width: 40px; 
+    height: 40px;
     margin-right: 10px; 
 }
 
@@ -277,8 +271,8 @@ footer {
 /* Styles pour le logo Instagram */
 .contact-info2 img {
     padding-right:12px;
-    width: 40px; /* Ajustez la taille selon votre besoin */
-    height: 40px; /* Ajustez la taille selon votre besoin */
+    width: 40px; 
+    height: 40px; 
     margin-right: 5px; 
 }
 
@@ -292,13 +286,11 @@ footer {
 }
 
 .nav-toggle {
-    display: none; /* Caché par défaut */
+    display: none; 
 }
 
 
-/* Ajout de styles pour les écrans de taille inférieure à 768px (téléphones) */
-/* CSS global */
-/* Ajout du media query pour les écrans de largeur maximale de 768px */
+
 @media only screen and (max-width: 768px) {
     /* Styles de base */
     *,
@@ -315,7 +307,7 @@ footer {
         background-position: center; 
         background-repeat: no-repeat;
         font-family: "Dela Gothic One", sans-serif;
-        color: white; /* Ajout de la couleur de police par défaut */
+        color: white; 
     }
 
     /* Header */
@@ -336,9 +328,9 @@ footer {
     
 
     nav  {
-        padding: 5px 0; /* Ajustement de l'espacement */
+        padding: 5px 0; 
         display: flex;
-        justify-content: space-between; /* Espace uniforme entre les éléments */
+        justify-content: space-between;
     }
 
     .nav_link {
@@ -351,62 +343,62 @@ footer {
     }
 
     .nav-pics img{
-        height: 100px; /* Ajustement de la taille des images */
-        width: 100px; /* Ajustement de la taille des images */
-        margin-bottom: 10px; /* Espacement entre les images */
+        height: 100px; 
+        width: 100px; 
+        margin-bottom: 10px;
     }
     
     /* Contenu principal */
     .container {
-        position: relative; /* Modification de la position pour centrer le contenu */
+        position: relative; 
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        margin-top: 50px; /* Ajustement de la marge supérieure */
-        text-align: center; /* Centrage du contenu */
-        max-width: 90%; /* Limite la largeur du conteneur */
-        margin-left: auto; /* Centre le conteneur horizontalement */
-        margin-right: auto; /* Centre le conteneur horizontalement */
+        margin-top: 50px; 
+        text-align: center;
+        max-width: 90%; 
+        margin-left: auto; 
+        margin-right: auto; 
     }
 
     .container {
-        display: flex; /* Utiliser flexbox pour centrer les éléments */
+        display: flex; 
         justify-content: center;
         margin-right:40px; 
     }
     
     .countdown {
-        font-size: 1.5em; /* Ajustement de la taille de la police */
+        font-size: 1.5em; 
     }
     
     .countdown-background {
-        width: 80%; /* Ajustement de la largeur du fond */
-        max-width: 600px; /* Limitation de la largeur maximale */
-        height: 90px; /* Ajustement de la hauteur du fond */
+        width: 80%; 
+        max-width: 600px; 
+        height: 90px; 
         border-radius: 20px;
     }
     
     
 
     .texte p {
-        margin-top: 50px; /* Ajustement de la marge supérieure */
+        margin-top: 50px; 
         font-size: 1.2em; 
         margin-left:20px;
         margin-right:20px;
     }
 
     .carousel-container {
-        margin-top: 50px; /* Ajustement de la marge supérieure */
-        margin-bottom: 20px; /* Ajustement de la marge inférieure */
+        margin-top: 50px; 
+        margin-bottom: 20px;
         display: flex;
         justify-content: center; 
         margin-left: 20px;
-        margin-right: 20px; /* Centrage horizontal */
+        margin-right: 20px; 
     }
 
     .image-container {
         overflow-x: hidden;
-        max-width: 100%; /* Utilisation maximale de l'espace disponible */
+        max-width: 100%; 
     }
 
     .down-arrow-container {
@@ -429,27 +421,27 @@ footer {
     }
     /* Bouton de shopping */
     .shop-btn-container {
-        margin-top: 50px; /* Ajustement de la marge supérieure */
-        margin-bottom: 100px; /* Ajustement de la marge inférieure */
+        margin-top: 50px; 
+        margin-bottom: 100px;
         display: flex;
-        justify-content: center; /* Centrage horizontal */
+        justify-content: center; 
     }
 
     .shop-btn-container button {
-        width: 100%; /* Ajustement de la largeur */
-        max-width: 400px; /* Limitation de la largeur maximale */
-        height: 80px; /* Ajustement de la hauteur */
+        width: 100%; 
+        max-width: 400px; 
+        height: 80px; 
         font-size: 1.5em;
-        padding:20px;  /* Ajustement de la taille de la police */
+        padding:20px;  
     }
 
     #long-text {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        max-height: 2em; /* Hauteur initiale pour couper le texte */
-        transition: max-height 0.3s ease, padding-top 0.3s ease; /* Transition pour l'animation */
-        padding-top: 0; /* Supprime l'espacement initial */
+        max-height: 2em; 
+        transition: max-height 0.3s ease, padding-top 0.3s ease;
+        padding-top: 0; 
     }
     
     #show-more-btn {
@@ -463,9 +455,9 @@ footer {
     }
     
     .texte.expanded #long-text {
-        max-height: 1000px; /* Hauteur maximale pour afficher tout le texte */
-        padding-top: 10px; /* Espacement pour séparer le texte du bouton */
-        white-space: normal; /* Affiche le texte sur plusieurs lignes */
+        max-height: 1000px; 
+        padding-top: 10px; 
+        white-space: normal; 
     }
     
     
@@ -476,20 +468,20 @@ footer {
     }
 
     .footer-pics img {
-        height: 80px; /* Ajustement de la taille des images */
-        width: 80px; /* Ajustement de la taille des images */
-        margin-bottom: 10px; /* Espacement entre les images */
+        height: 80px; 
+        width: 80px; 
+        margin-bottom: 10px; 
     }
 
     .footer-text {
-        font-size: 1.2em; /* Ajustement de la taille de la police */
-        margin-bottom: 20px; /* Ajustement de la marge inférieure */
+        font-size: 1.2em; 
+        margin-bottom: 20px; 
     }
 
     /* Styles pour la section de liens dans le footer */
     .footer-links {
-        font-size: 1.2em; /* Ajustement de la taille de la police */
-        margin-top: 20px; /* Ajustement de la marge supérieure */
+        font-size: 1.2em;
+        margin-top: 20px; 
     }
 
     /* Styles pour le titre "Nous contacter" */
@@ -503,19 +495,561 @@ footer {
     }
 
     .contact-info img {
-        width: 30px; /* Ajustez la taille selon votre besoin */
-        height: 30px; /* Ajustez la taille selon votre besoin */
+        width: 30px;
+        height: 30px;
         margin-right: 5px; 
     }
 
     .contact-info2 img {
-        width: 30px; /* Ajustez la taille selon votre besoin */
-        height: 30px; /* Ajustez la taille selon votre besoin */
+        width: 30px; 
+        height: 30px; 
         margin-right: 5px; 
     }
 
     .shopping {
-        margin-top: 20px; /* Ajustement de la marge supérieure */
+        margin-top: 20px; 
     }
 
 }
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    /* Styles pour les tablettes */
+
+    *,
+    *::after,
+    *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+    body {
+        background-image: url('../img/98.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        font-family: "Dela Gothic One", sans-serif;
+        color: white; 
+    }
+
+    /* Header */
+    header {
+        display:none;
+    }
+
+
+    h1 {
+        text-align: center; 
+        font-size: 1.3em; 
+        
+    }
+
+    h1 span {
+        font-size: 2em;
+    }
+    
+
+    nav  {
+        padding: 5px 0; 
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav_link {
+        font-size: 1.5em; 
+    }
+
+    .nav_link a {
+        text-decoration: none;
+        color: white;   
+    }
+
+    .nav-pics img{
+        height: 100px; 
+        width: 100px; 
+        margin-bottom: 10px;
+    }
+    
+    /* Contenu principal */
+    .container {
+        position: relative; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 50px; 
+        text-align: center;
+        max-width: 90%; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+
+    .container {
+        display: flex; 
+        justify-content: center;
+        margin-right:80px; 
+    }
+    
+    .countdown {
+        font-size: 1.8em; 
+    }
+    
+    .countdown-background {
+        width: 50%; 
+        max-width: 600px; 
+        height: 90px; 
+        border-radius: 20px;
+    }
+    
+    
+
+    .texte p {
+        margin-top: 50px; 
+        font-size: 1.2em; 
+        margin-left:40px;
+        margin-right:40px;
+    }
+
+    .carousel-container {
+        margin-top: 50px; 
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center; 
+        margin-left: 20px;
+        margin-right: 20px; 
+    }
+
+    .image-container {
+        overflow-x: hidden;
+        max-width: 100%; 
+    }
+
+    .down-arrow-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px; 
+    }
+
+    .down-arrow {
+        width: 150px;
+    }
+
+    .text {
+        margin-top:10px;
+        color:white;
+        text-align: center;
+        font-size: 1.2em;
+        margin-left:20px;
+        margin-right:20px;
+    }
+    /* Bouton de shopping */
+    .shop-btn-container {
+        margin-top: 50px; 
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center; 
+    }
+
+    .shop-btn-container button {
+        width: 100%; 
+        max-width: 400px; 
+        height: 80px; 
+        font-size: 1.5em;
+        padding:20px;  
+    }
+
+    #long-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-height: 2em; 
+        transition: max-height 0.3s ease, padding-top 0.3s ease;
+        padding-top: 0; 
+    }
+    
+    #show-more-btn {
+        margin-top:15px; 
+        margin-left:40px;
+        color:white;  
+        background-color:rgb(217, 217, 217, 0.33); 
+        border:none; 
+        border-radius: 20px;
+        width: 100px;
+    }
+    
+    .texte.expanded #long-text {
+        max-height: 1000px; 
+        padding-top: 10px; 
+        white-space: normal; 
+    }
+    
+    
+    
+    /* Footer */
+    footer {
+        display: none;
+    }
+
+    .footer-pics img {
+        height: 80px; 
+        width: 80px; 
+        margin-bottom: 10px; 
+    }
+
+    .footer-text {
+        font-size: 1.2em; 
+        margin-bottom: 20px; 
+    }
+
+    /* Styles pour la section de liens dans le footer */
+    .footer-links {
+        font-size: 1.2em;
+        margin-top: 20px; 
+    }
+
+    /* Styles pour le titre "Nous contacter" */
+    .footer-links h3 {
+        margin-bottom: 10px;
+    }
+
+    /* Styles pour la section de contact (logo Instagram et nom d'utilisateur) */
+    .contact-info {
+        align-items: center;
+    }
+
+    .contact-info img {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px; 
+    }
+
+    .contact-info2 img {
+        width: 30px; 
+        height: 30px; 
+        margin-right: 5px; 
+    }
+
+    .shopping {
+        margin-top: 20px; 
+    }
+
+}
+
+/* @media screen and (min-width: 769px) and (max-width: 1023px) {
+    #long-text br {
+        display: none;
+    }
+} */
+
+/* Ajoutez ce bloc de media queries à la fin de votre fichier CSS */
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    /* Styles pour les petits écrans d'ordinateurs */
+    .nav-pics img{
+        margin-right: 10px;
+        padding-top:20px; 
+        height: 90px;
+        width: 90px;
+        margin-bottom:20px; 
+    }
+    /* Ajustements pour le header */
+    .nav_link {
+        margin-right: 30px;
+        font-size: 1.4em;
+        margin-right:150px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+    .nav_link a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;   
+    }
+    /* Ajustements pour le texte */
+    h1 {
+        margin: 70px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        font-size: 3.5em; /* Réduire la taille de la police pour les petits écrans d'ordinateurs */
+    }
+
+    .container {
+        display: flex; 
+        justify-content: center;
+        margin-right:15px; 
+        margin-top:100px;
+    }
+    
+    .countdown {
+        font-size:3em; 
+    }
+    
+    .countdown-background {
+        width: 60%; 
+        max-width: 600px; 
+        height: 90px; 
+        border-radius: 20px;
+    }
+
+    .texte p {
+        margin-top: 50px; 
+        font-size: 1.2em; 
+        margin-left:40px;
+        margin-right:40px;
+    }
+
+    .texte {
+        margin-top:75px; 
+        margin-bottom:100px; 
+    }
+    /* Ajustements pour le carousel */
+    .carousel-container {
+        margin-top: 50px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        margin-bottom: 10px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+    .shop-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom:400px;
+        margin-right:120px;
+    }
+    
+    /* Ajustements pour le bouton de magasinage */
+    .shop-btn-container button {
+        width: 150%; /* Réduire la largeur du bouton pour les petits écrans d'ordinateurs */
+        height: 100px; /* Réduire la hauteur du bouton pour les petits écrans d'ordinateurs */
+        font-size: 2em; /* Réduire la taille de la police pour les petits écrans d'ordinateurs */
+    }
+
+    .down-arrow {
+        margin-top:50px;
+    }
+    /* Ajustements pour le footer */
+    .footer-text {
+        margin-left: 200px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+    /* Ajustements pour les images du footer */
+    .footer-pics img {
+        margin-left: 5px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        margin-bottom: 5px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        height: 60px; /* Réduire la taille des images pour les petits écrans d'ordinateurs */
+        width: 60px; /* Réduire la taille des images pour les petits écrans d'ordinateurs */
+    }
+
+    /* Ajustements pour la section de liens dans le footer */
+    .footer-links {
+        margin-left: 250px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    #long-text br {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1650px) {
+    /* Styles pour les petits écrans d'ordinateurs */
+    .nav-pics img{
+        margin-right: 10px;
+        padding-top:20px; 
+        height: 90px;
+        width: 90px;
+        margin-bottom:20px; 
+    }
+    /* Ajustements pour le header */
+    .nav_link {
+        /* margin-right: 60px; */
+        font-size: 1.4em;
+        margin-right:205px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+    .nav_link a {
+        margin: 0 30px;
+        text-decoration: none;
+        color: white;   
+    }
+    /* Ajustements pour le texte */
+    h1 {
+        margin: 70px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        font-size: 3.5em; /* Réduire la taille de la police pour les petits écrans d'ordinateurs */
+    }
+
+    .container {
+        display: flex; 
+        justify-content: center;
+        margin-right:15px; 
+        margin-top:100px;
+    }
+    
+    .countdown {
+        font-size:3em; 
+    }
+    
+    .countdown-background {
+        width: 60%; 
+        max-width: 600px; 
+        height: 90px; 
+        border-radius: 20px;
+    }
+
+    .texte p {
+        margin-top: 50px; 
+        font-size: 1.2em; 
+        margin-left:40px;
+        margin-right:40px;
+    }
+
+    .texte {
+        margin-top:75px; 
+        margin-bottom:100px; 
+    }
+    /* Ajustements pour le carousel */
+    .carousel-container {
+        margin-top: 50px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        margin-bottom: 10px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+    .shop-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom:400px;
+        margin-right:120px;
+    }
+    
+    /* Ajustements pour le bouton de magasinage */
+    .shop-btn-container button {
+        width: 150%; /* Réduire la largeur du bouton pour les petits écrans d'ordinateurs */
+        height: 100px; /* Réduire la hauteur du bouton pour les petits écrans d'ordinateurs */
+        font-size: 2em; /* Réduire la taille de la police pour les petits écrans d'ordinateurs */
+    }
+
+    .down-arrow {
+        margin-top:50px;
+    }
+    /* Ajustements pour le footer */
+    .footer-text {
+        margin-left: 25%; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+    /* Ajustements pour les images du footer */
+    .footer-pics img {
+        margin-left: 5px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        margin-bottom: 5px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        height: 90px; /* Réduire la taille des images pour les petits écrans d'ordinateurs */
+        width: 90px; /* Réduire la taille des images pour les petits écrans d'ordinateurs */
+    }
+
+    /* Ajustements pour la section de liens dans le footer */
+    .footer-links {
+        margin-left: 25%; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+}
+
+@media screen and (min-width: 1651px) and (max-width: 1920px) {
+    /* Styles pour les petits écrans d'ordinateurs */
+    .nav-pics img{
+        margin-right: 10px;
+        padding-top:20px; 
+        height: 90px;
+        width: 90px;
+        margin-bottom:20px; 
+    }
+    /* Ajustements pour le header */
+    .nav_link {
+        /* margin-right: 60px; */
+        font-size: 1.4em;
+        margin-right:205px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+    .nav_link a {
+        margin: 0 30px;
+        text-decoration: none;
+        color: white;   
+    }
+    /* Ajustements pour le texte */
+    h1 {
+        margin: 70px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        font-size: 3.5em; /* Réduire la taille de la police pour les petits écrans d'ordinateurs */
+    }
+
+    .container {
+        display: flex; 
+        justify-content: center;
+        margin-right:15px; 
+        margin-top:100px;
+    }
+    
+    .countdown {
+        font-size:3em; 
+    }
+    
+    .countdown-background {
+        width: 60%; 
+        max-width: 600px; 
+        height: 90px; 
+        border-radius: 20px;
+    }
+
+    .texte p {
+        margin-top: 50px; 
+        font-size: 1.2em; 
+        margin-left:40px;
+        margin-right:40px;
+    }
+
+    .texte {
+        margin-top:75px; 
+        margin-bottom:100px; 
+    }
+    /* Ajustements pour le carousel */
+    .carousel-container {
+        margin-top: 50px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        margin-bottom: 10px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+    .shop-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom:400px;
+        margin-right:120px;
+    }
+    
+    /* Ajustements pour le bouton de magasinage */
+    .shop-btn-container button {
+        width: 150%; /* Réduire la largeur du bouton pour les petits écrans d'ordinateurs */
+        height: 100px; /* Réduire la hauteur du bouton pour les petits écrans d'ordinateurs */
+        font-size: 2em; /* Réduire la taille de la police pour les petits écrans d'ordinateurs */
+    }
+
+    .down-arrow {
+        margin-top:50px;
+    }
+    /* Ajustements pour le footer */
+    .footer-text {
+        margin-left: 31%; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+    /* Ajustements pour les images du footer */
+    .footer-pics img {
+        margin-left: 5px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        margin-bottom: 5px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        height: 90px; /* Réduire la taille des images pour les petits écrans d'ordinateurs */
+        width: 90px; /* Réduire la taille des images pour les petits écrans d'ordinateurs */
+    }
+
+    /* Ajustements pour la section de liens dans le footer */
+    .footer-links {
+        margin-left: 30%; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+}
+
+/* @media screen and (min-width: 1024px) and (max-width: 1366px) {
+    #long-text br {
+        display: none;
+    }
+} */
