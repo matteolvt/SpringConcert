@@ -1047,9 +1047,3 @@ footer {
         margin-left: 30%; /* Réduire la marge pour les petits écrans d'ordinateurs */
     }
 }
-
-/* @media screen and (min-width: 1024px) and (max-width: 1366px) {
-    #long-text br {
-        display: none;
-    }
-} */
