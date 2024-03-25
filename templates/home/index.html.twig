@@ -15,10 +15,34 @@
 			<div class="nav_link">
 				<a href="#" id="underline">ACCUEIL</a>
 				<a href="{{ path('artistes') }}">ARTISTES</a>
-				<a href="#">BILLETERIE</a>
+				<a href="{{ path('shop') }}">BILLETERIE</a>
+				<a href="#">INFOS PRATIQUES</a>
 			</div>
 		</nav>
 	</header>
+
+	<div class="menu-ham">
+		<input type="checkbox" class="check" id="menu-toggle">
+		<label for="menu-toggle" class="ham-menu">
+			<span class="line line1"></span>
+			<span class="line line2"></span>
+			<span class="line line3"></span>
+		</label>
+		<ul class="menu-items">
+			<li>
+				<a href="#">Accueil</a>
+			</li>
+			<li>
+				<a href="{{ path('artistes') }}">Artistes</a>
+			</li>
+			<li>
+				<a href="{{ path('shop') }}">Billeterie</a>
+			</li>
+			<li>
+				<a href="#">Infos pratiques</a>
+			</li>
+		</ul>
+	</div>
 
 
 	<h1>
@@ -56,7 +80,7 @@
 					<img src="img/AFFICHES/vf-affiche-seven-zeno.png" alt="sevenzuno">
 				</div>
 				<div>
-					<img src="img/AFFICHES/v1.1-affiche-siiré.png" alt="siire">
+					<img src="img/AFFICHES/v1.1-affiche-siire.png" alt="siire">
 				</div>
 				<div>
 					<img src="img/AFFICHES/v1.2-affiche-akuro.png" alt="akuro">

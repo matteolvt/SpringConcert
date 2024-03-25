@@ -79,6 +79,11 @@ h1 {
     justify-content: space-around; /* Les éléments seront répartis de manière équitable avec un espace autour */
 }
 
+.bloc-mise-en-page a {
+    color:white;
+    text-decoration: none;
+}
+
 .trio {
     display: flex;
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
@@ -173,7 +178,7 @@ h1 {
 }
 
 .conteneurb:hover .txtcontenu {
-    bottom:22%;
+    bottom:30%;
 }
 
 .conteneurc:hover .txtcontenu {
@@ -350,3 +355,999 @@ footer {
 .nav-toggle {
     display: none; 
 }
+
+@media only screen and (max-width: 768px) {
+
+    *,
+    *::after,
+    *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+        background-image: url('../img/98.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        font-family: "Dela Gothic One", sans-serif;
+        color: white; 
+    }
+
+    /* Header */
+    header {
+        display:none;
+    }
+
+
+    h1 {
+        color:white; 
+        text-align: center;
+        font-size: 2em;
+    }
+    
+
+    .ham-menu {
+        height: 3rem;
+        width: 3rem;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 0.5rem;
+        z-index: 1000; /* Valeur de z-index plus élevée pour placer le menu au-dessus du contenu */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgb(217, 217, 217, 0.3);
+        border-radius: 0.25em;
+    }
+    
+    .ham-menu .line {
+        background-color: white;
+        border-radius: 1em;
+        width: 2rem;
+        height: 0.25rem;
+    }
+    
+    .ham-menu .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 100ms ease-in-out;
+    }
+    
+    .ham-menu .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 100ms ease-in-out;
+    }
+    
+    .check {
+        position: absolute;
+        top: 8rem;
+        left: 8rem;
+        height: 3rem;
+        width: 3rem;
+        opacity: 0;
+        z-index: 3;
+    }
+    
+    .check:checked~.ham-menu .line1 {
+        display: block;
+        transform: rotate(45deg);
+    }
+    
+    .check:checked~.ham-menu .line2 {
+        opacity: 0;
+    }
+    
+    .check:checked~.ham-menu .line3 {
+        display: block;
+        transform: rotate(-45deg);
+    }
+    
+    /* Menu items */
+    .menu-items {
+        text-align: center;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 300px;
+        height: 250px;
+        list-style: none;
+        opacity: 0;
+        font-size: 1.5em;
+        border: 4px solid rgb(217, 217, 217, 0.1);
+        background-color: rgb(217, 217, 217);
+        border-radius: 0.25em;
+        transform: translateX(-10%);
+        transition: transform 100ms ease-in-out, opacity 200ms;
+        pointer-events: none;
+        z-index: 999;
+        padding-top:15px;
+    }
+    
+    
+    .menu-items li {
+        color: white;
+        padding: 0.5rem;
+    }
+    
+    .menu-items li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .menu-items li a:hover {
+        color: rgb(174, 174, 174);
+    }
+    
+    .check:checked~.menu-items {
+        display: block;
+        transform: translateX(0%);
+        opacity: 1;
+        pointer-events: auto; /* Activer les clics sur les liens lorsque le menu est ouvert */
+    }
+
+    .conteneura,
+    .conteneurb,
+    .conteneurc,
+    .conteneurd,
+    .conteneure
+    {
+        width: 140px;
+        height: 179px;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .conteneura .imgcontenu,
+    .conteneurb .imgcontenu,
+    .conteneurc .imgcontenu,
+    .conteneurd .imgcontenu,
+    .conteneure .imgcontenu{
+        width: 140px;
+        height: 179px;
+        border-radius: 10px;
+    }
+
+    .conteneura:hover .overlay,
+    .conteneurb:hover .overlay,
+    .conteneurc:hover .overlay,
+    .conteneurd:hover .overlay,
+    .conteneure:hover .overlay  {
+        display:none;
+    }
+
+    .conteneura:hover .txtcontenu,
+    .conteneurb:hover .txtcontenu,
+    .conteneurc:hover .txtcontenu,
+    .conteneurd:hover .txtcontenu,
+    .conteneure:hover .txtcontenu {
+        display: none;
+    }
+
+    .mise-en-page {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top:-40px;
+    }
+
+   .duo .bloc-duo {
+        margin: 20px; 
+    }
+
+    .trio .bloc-trio {
+        margin: 20px; 
+    }
+
+    .trio {
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    .down-arrow-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-left:120px; 
+    }
+
+    .down-arrow img {
+        width: 150px;
+    }
+
+    .text h2 {
+        margin-top:10px;
+        color:white;
+        text-align: center;
+        font-size: 1em;
+        margin-left:20px;
+        margin-right:20px;
+    }
+
+    .shop-btn-container {
+        margin-top: 50px; 
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center; 
+    }
+
+    .shop-btn-container button {
+        width: 100%; 
+        max-width: 400px; 
+        height: 80px; 
+        font-size: 1.5em;
+        padding:20px;  
+    }
+
+    footer {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    *,
+    *::after,
+    *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+        background-image: url('../img/98.jpg');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        font-family: "Dela Gothic One", sans-serif;
+        color: white; 
+    }
+
+    /* Header */
+    header {
+        display:none;
+    }
+
+
+    h1 {
+        color:white; 
+        text-align: center;
+        font-size: 4em;
+    }
+    
+
+    .ham-menu {
+        height: 3rem;
+        width: 3rem;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 0.5rem;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgb(217, 217, 217, 0.3);
+        border-radius: 0.25em;
+    }
+    
+    .ham-menu .line {
+        background-color: white;
+        border-radius: 1em;
+        width: 2rem;
+        height: 0.25rem;
+    }
+    
+    .ham-menu .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 100ms ease-in-out;
+    }
+    
+    .ham-menu .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 100ms ease-in-out;
+    }
+    
+    .check {
+        position: absolute;
+        top: 8rem;
+        left: 8rem;
+        height: 3rem;
+        width: 3rem;
+        opacity: 0;
+        z-index: 3;
+    }
+    
+    .check:checked~.ham-menu .line1 {
+        display: block;
+        transform: rotate(45deg);
+    }
+    
+    .check:checked~.ham-menu .line2 {
+        opacity: 0;
+    }
+    
+    .check:checked~.ham-menu .line3 {
+        display: block;
+        transform: rotate(-45deg);
+    }
+    
+    /* Menu items */
+    .menu-items {
+        text-align: center;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 300px;
+        height: 250px;
+        list-style: none;
+        opacity: 0;
+        font-size: 1.5em;
+        border: 4px solid rgb(217, 217, 217, 0.1);
+        background-color: rgb(217, 217, 217);
+        border-radius: 0.25em;
+        transform: translateX(-10%);
+        transition: transform 100ms ease-in-out, opacity 200ms;
+        pointer-events: none;
+        z-index: 999;
+        padding-top:15px;
+    }
+    
+    
+    .menu-items li {
+        color: white;
+        padding: 0.5rem;
+    }
+    
+    .menu-items li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .menu-items li a:hover {
+        color: rgb(174, 174, 174);
+    }
+    
+    .check:checked~.menu-items {
+        display: block;
+        transform: translateX(0%);
+        opacity: 1;
+        pointer-events: auto; /* Activer les clics sur les liens lorsque le menu est ouvert */
+    }
+
+    .conteneura,
+    .conteneurb,
+    .conteneurc,
+    .conteneurd,
+    .conteneure
+    {
+        width: 300px;
+        height: 369px;
+        border-radius: 10px;
+    }
+
+    .conteneura .imgcontenu,
+    .conteneurb .imgcontenu,
+    .conteneurc .imgcontenu,
+    .conteneurd .imgcontenu,
+    .conteneure .imgcontenu{
+        width: 300px;
+        height: 369px;
+        border-radius: 10px;
+    }
+
+    .conteneura:hover .overlay,
+    .conteneurb:hover .overlay,
+    .conteneurc:hover .overlay,
+    .conteneurd:hover .overlay,
+    .conteneure:hover .overlay  {
+        display:none;
+    }
+
+    .conteneura:hover .txtcontenu,
+    .conteneurb:hover .txtcontenu,
+    .conteneurc:hover .txtcontenu,
+    .conteneurd:hover .txtcontenu,
+    .conteneure:hover .txtcontenu {
+        display: none;
+    }
+
+    .mise-en-page {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top:-40px;
+    }
+
+    .duo .bloc-duo {
+        margin: 20px; 
+    }
+
+    .trio .bloc-trio {
+        margin: 20px; 
+    }
+
+    .trio {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .down-arrow-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-left:145px; 
+    }
+
+    .down-arrow img {
+        width: 150px;
+    }
+
+    .text h2 {
+        margin-top:10px;
+        color:white;
+        text-align: center;
+        font-size: 1em;
+        margin-left:20px;
+        margin-right:20px;
+    }
+
+    .shop-btn-container {
+        margin-top: 50px; 
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center; 
+    }
+
+    .shop-btn-container button {
+        width: 100%; 
+        max-width: 400px; 
+        height: 80px; 
+        font-size: 1.5em;
+        padding:20px;  
+    }
+
+    footer {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    /* Styles pour les petits écrans d'ordinateurs */
+    .nav-pics img{
+        margin-right: 10px;
+        padding-top:20px; 
+        height: 90px;
+        width: 90px;
+        margin-bottom:20px; 
+    }
+    /* Ajustements pour le header */
+    .nav_link {
+        margin-right: 30px;
+        font-size: 1.2em;
+        margin-right:150px;
+    }
+
+    .nav_link a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;   
+    }
+    /* Ajustements pour le texte */
+    h1 {
+        margin: 70px; 
+        font-size: 3.5em; 
+    }
+
+    .mise-en-page {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+        justify-content: space-around; /* Les éléments seront répartis de manière équitable avec un espace autour */
+    }
+    
+    .bloc-mise-en-page a {
+        color:white;
+        text-decoration: none;
+    }
+    
+    .trio {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+        justify-content: space-around; /* Les éléments seront répartis de manière équitable avec un espace autour */
+    }
+    
+    .trio .bloc-mise-en-page {
+        margin: 20px;
+        flex-basis: calc(33.33% - 40px); /* Largeur de base de chaque bloc (33.33% moins les marges) */
+    }
+    
+    .duo {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+        justify-content: space-around; /* Les éléments seront répartis de manière équitable avec un espace autour */
+    }
+    
+    .duo .bloc-mise-en-page {
+        margin: 20px;
+        flex-basis: calc(50% - 40px); /* Largeur de base de chaque bloc (50% moins les marges) */
+    }
+    
+    /* .bloc-mise-en-page {
+        margin: 20px;
+    } */
+    
+    .conteneura,
+    .conteneurb,
+    .conteneurc,
+    .conteneurd,
+    .conteneure
+     {
+        width: 295px;
+        height: 369px;
+        border-radius: 18px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .conteneura .imgcontenu,
+    .conteneurb .imgcontenu,
+    .conteneurc .imgcontenu,
+    .conteneurd .imgcontenu,
+    .conteneure .imgcontenu{
+        width: 295px;
+        height: 369px;
+        border-radius: 18px;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent noir */
+        border-radius: 18px; /* Pour correspondre au coin du conteneur */
+        opacity: 0; /* Par défaut, l'overlay est invisible */
+        transition: opacity 0.5s ease; /* Transition pour une animation fluide */
+    }
+    
+    .conteneura:hover .overlay,
+    .conteneurb:hover .overlay,
+    .conteneurc:hover .overlay,
+    .conteneurd:hover .overlay,
+    .conteneure:hover .overlay  {
+        opacity: 1; /* Affiche l'overlay au survol */
+    }
+    
+    .txtcontenu {
+        color: white;
+        font-size:1em;
+        position: absolute;
+        left: 50%; 
+        bottom:-100%;/* Déplacer le texte à 50% de la largeur du conteneur */
+        transform: translate(-50%, -50%); /* Centrer le texte */
+        z-index: 2;
+        opacity: 0; /* Par défaut, le texte est invisible */
+        transition: opacity 0.5s ease; /* Transition pour une animation fluide */
+        text-align: center; /* Centrer le texte horizontalement */
+    }
+    
+    .conteneura:hover .txtcontenu,
+    .conteneurb:hover .txtcontenu,
+    .conteneurc:hover .txtcontenu,
+    .conteneurd:hover .txtcontenu,
+    .conteneure:hover .txtcontenu {
+        opacity: 1; /* Affiche le texte au survol */
+    }
+    
+    .conteneura:hover .txtcontenu {
+        top:27%;
+    }
+    
+    .conteneurb:hover .txtcontenu {
+        top:27%;
+    }
+    
+    .conteneurc:hover .txtcontenu {
+        top:27%;
+    }
+    
+    .conteneurd:hover .txtcontenu {
+        top:30%;
+    }
+    
+    .conteneure:hover .txtcontenu {
+        top:27%;
+    }
+    
+    .btn {
+        position: absolute;
+        left: 50%; /* Déplacer le bouton à 50% de la largeur du conteneur */
+        bottom: -80px; /* Descendre davantage le bouton */
+        transform: translateX(-50%); /* Centrer horizontalement le bouton */
+        z-index: 2;
+        opacity: 1; /* Par défaut, le bouton est invisible */
+        transition: bottom 0.5s ease, opacity 0.5s ease; /* Transition pour une animation fluide */
+    }
+    
+    
+    .btn button {
+        margin-top: 10px;
+        background-color: rgb(46, 31, 31, 0.75);
+        color:white;
+        border: none;
+        border-radius:15px;
+        width: 156px;
+        height: 58px;
+        font-size: 0.9em;
+    }
+
+    /* Ajustements pour le bouton */
+    .conteneura .btn {
+        position: absolute;
+        left: 50%;
+        bottom: -160px;
+        transform: translateX(-50%);
+        z-index: 2;
+        opacity: 1;
+        transition: bottom 0.5s ease, opacity 0.5s ease;
+    }
+
+    .conteneurb .btn {
+        position: absolute;
+        left: 50%;
+        bottom: -165px;
+        transform: translateX(-50%);
+        z-index: 2;
+        opacity: 1;
+        transition: bottom 0.5s ease, opacity 0.5s ease;
+    }
+
+    .conteneurc .btn {
+        position: absolute;
+        left: 50%;
+        bottom: -160px;
+        transform: translateX(-50%);
+        z-index: 2;
+        opacity: 1;
+        transition: bottom 0.5s ease, opacity 0.5s ease;
+    }
+
+    .conteneurd .btn {
+        position: absolute;
+        left: 50%;
+        bottom: -150px;
+        transform: translateX(-50%);
+        z-index: 2;
+        opacity: 1;
+        transition: bottom 0.5s ease, opacity 0.5s ease;
+    }
+
+    .conteneure .btn {
+        position: absolute;
+        left: 50%;
+        bottom: -150px;
+        transform: translateX(-50%);
+        z-index: 2;
+        opacity: 1;
+        transition: bottom 0.5s ease, opacity 0.5s ease;
+    }
+
+    .shop-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom:400px;
+        margin-right:120px;
+    }
+    
+    /* Ajustements pour le bouton de magasinage */
+    .shop-btn-container button {
+        width: 150%; /* Réduire la largeur du bouton pour les petits écrans d'ordinateurs */
+        height: 100px; /* Réduire la hauteur du bouton pour les petits écrans d'ordinateurs */
+        font-size: 2em; /* Réduire la taille de la police pour les petits écrans d'ordinateurs */
+    }
+
+    .down-arrow {
+        margin-top:50px;
+    }
+    /* Ajustements pour le footer */
+    .footer-text {
+        margin-left: 200px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+    /* Ajustements pour les images du footer */
+    .footer-pics img {
+        margin-left: 5px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        margin-bottom: 5px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        height: 60px; /* Réduire la taille des images pour les petits écrans d'ordinateurs */
+        width: 60px; /* Réduire la taille des images pour les petits écrans d'ordinateurs */
+    }
+
+    /* Ajustements pour la section de liens dans le footer */
+    .footer-links {
+        margin-left: 20%; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+}
+
+/* @media screen and (min-width: 1024px) and (max-width: 1366px) {
+    #long-text br {
+        display: none;
+    }
+} */
+
+@media screen and (min-width: 1367px) and (max-width: 1650px) {
+    /* Styles pour les petits écrans d'ordinateurs */
+    .nav-pics img{
+        margin-right: 10px;
+        padding-top:20px; 
+        height: 90px;
+        width: 90px;
+        margin-bottom:20px; 
+    }
+    /* Ajustements pour le header */
+    .nav_link {
+        margin-right: 30px;
+        font-size: 1.4em;
+        margin-right:150px;
+    }
+
+    .nav_link a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: white;   
+    }
+    /* Ajustements pour le texte */
+    h1 {
+        margin: 70px; 
+        font-size: 3.5em; 
+    }
+
+    .mise-en-page {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+        justify-content: space-around; /* Les éléments seront répartis de manière équitable avec un espace autour */
+    }
+    
+    .bloc-mise-en-page a {
+        color:white;
+        text-decoration: none;
+    }
+    
+    .trio {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+        justify-content: space-around; /* Les éléments seront répartis de manière équitable avec un espace autour */
+    }
+    
+    .trio .bloc-mise-en-page {
+        margin: 20px;
+        flex-basis: calc(33.33% - 40px); /* Largeur de base de chaque bloc (33.33% moins les marges) */
+    }
+    
+    .duo {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+        justify-content: space-around; /* Les éléments seront répartis de manière équitable avec un espace autour */
+    }
+    
+    .duo .bloc-mise-en-page {
+        margin: 20px;
+        flex-basis: calc(50% - 40px); /* Largeur de base de chaque bloc (50% moins les marges) */
+    }
+    
+    /* .bloc-mise-en-page {
+        margin: 20px;
+    } */
+    
+    .conteneura,
+    .conteneurb,
+    .conteneurc,
+    .conteneurd,
+    .conteneure
+     {
+        width: 396px;
+        height: 495px;
+        border-radius: 18px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .conteneura .imgcontenu,
+    .conteneurb .imgcontenu,
+    .conteneurc .imgcontenu,
+    .conteneurd .imgcontenu,
+    .conteneure .imgcontenu{
+        width: 396px;
+        height: 495px;
+        border-radius: 18px;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent noir */
+        border-radius: 18px; /* Pour correspondre au coin du conteneur */
+        opacity: 0; /* Par défaut, l'overlay est invisible */
+        transition: opacity 0.5s ease; /* Transition pour une animation fluide */
+    }
+    
+    .conteneura:hover .overlay,
+    .conteneurb:hover .overlay,
+    .conteneurc:hover .overlay,
+    .conteneurd:hover .overlay,
+    .conteneure:hover .overlay  {
+        opacity: 1; /* Affiche l'overlay au survol */
+    }
+    
+    .txtcontenu {
+        color: white;
+        position: absolute;
+        left: 50%; 
+        bottom:-100%;/* Déplacer le texte à 50% de la largeur du conteneur */
+        transform: translate(-50%, -50%); /* Centrer le texte */
+        z-index: 2;
+        opacity: 0; /* Par défaut, le texte est invisible */
+        transition: opacity 0.5s ease; /* Transition pour une animation fluide */
+        text-align: center; /* Centrer le texte horizontalement */
+    }
+    
+    .conteneura:hover .txtcontenu,
+    .conteneurb:hover .txtcontenu,
+    .conteneurc:hover .txtcontenu,
+    .conteneurd:hover .txtcontenu,
+    .conteneure:hover .txtcontenu {
+        opacity: 1; /* Affiche le texte au survol */
+    }
+    
+    .conteneura:hover .txtcontenu {
+        bottom:24%;
+    }
+    
+    .conteneurb:hover .txtcontenu {
+        bottom:20%;
+    }
+    
+    .conteneurc:hover .txtcontenu {
+        bottom:26%;
+    }
+    
+    .conteneurd:hover .txtcontenu {
+      bottom:25%;
+    }
+    
+    .conteneure:hover .txtcontenu {
+        bottom:25%;
+    }
+    
+    .btn {
+        position: absolute;
+        left: 50%; /* Déplacer le bouton à 50% de la largeur du conteneur */
+        bottom:-80px; /* Descendre davantage le bouton */
+        transform: translateX(-50%); /* Centrer horizontalement le bouton */
+        z-index: 2;
+    }
+    
+    
+    .btn button {
+        margin-top: 10px;
+        background-color: rgb(46, 31, 31, 0.75);
+        color:white;
+        border: none;
+        border-radius:15px;
+        width: 156px;
+        height: 58px;
+        font-size: 0.9em;
+    }
+    
+    .shop-btn-container {
+        margin-right:90px;
+    }
+
+    .shop-btn-container button {
+        width: 150%; /* Réduire la largeur du bouton pour les petits écrans d'ordinateurs */
+        height: 100px; /* Réduire la hauteur du bouton pour les petits écrans d'ordinateurs */
+        font-size: 2em;
+         /* Réduire la taille de la police pour les petits écrans d'ordinateurs */
+    }
+
+    .down-arrow {
+        margin-top:50px;
+    }
+    /* Ajustements pour le footer */
+    .footer-text {
+        margin-left: 30%; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+
+    /* Ajustements pour les images du footer */
+    .footer-pics img {
+        margin-left: 5px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        margin-bottom: 5px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        height: 60px; /* Réduire la taille des images pour les petits écrans d'ordinateurs */
+        width: 60px; /* Réduire la taille des images pour les petits écrans d'ordinateurs */
+    }
+
+    /* Ajustements pour la section de liens dans le footer */
+    .footer-links {
+        margin-left: 25%; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+}
+
+@media screen and (min-width: 1651px) and (max-width: 1920px) {
+    /* Styles pour les petits écrans d'ordinateurs */
+    .nav-pics img{
+        margin-right: 10px;
+        padding-top:20px; 
+        height: 90px;
+        width: 90px;
+        margin-bottom:20px; 
+    }
+    /* Ajustements pour le header */
+    .nav_link {
+        /* margin-right: 60px; */
+        font-size: 1.4em;
+        margin-right:205px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+    .nav_link a {
+        margin: 0 30px;
+        text-decoration: none;
+        color: white;   
+    }
+    /* Ajustements pour le texte */
+    h1 {
+        margin: 70px; 
+        font-size: 3.5em; 
+    }
+    
+    .shop-btn-container {
+        margin-right:110px;
+    }
+
+    .shop-btn-container button {
+        width: 150%; /* Réduire la largeur du bouton pour les petits écrans d'ordinateurs */
+        height: 100px; /* Réduire la hauteur du bouton pour les petits écrans d'ordinateurs */
+        font-size: 2em;
+    }
+
+    .down-arrow {
+        margin-top:50px;
+    }
+    /* Ajustements pour le footer */
+    .footer-text {
+        margin-left: 32%; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+
+
+    /* Ajustements pour les images du footer */
+    .footer-pics img {
+        margin-left: 5px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        margin-bottom: 5px; /* Réduire la marge pour les petits écrans d'ordinateurs */
+        height: 60px; /* Réduire la taille des images pour les petits écrans d'ordinateurs */
+        width: 60px; /* Réduire la taille des images pour les petits écrans d'ordinateurs */
+    }
+
+    /* Ajustements pour la section de liens dans le footer */
+    .footer-links {
+        margin-left: 29%; /* Réduire la marge pour les petits écrans d'ordinateurs */
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .menu-ham {
+        display: none;
+    }
+}
+
