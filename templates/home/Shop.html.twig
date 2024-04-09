@@ -21,7 +21,7 @@
 				<a href="{{ path('main') }}">ACCUEIL</a>
 				<a href="{{ path('artistes') }}">ARTISTES</a>
 				<a href="#" id="underline">BILLETERIE</a>
-				<a href="#">INFOS PRATIQUES</a>
+				<a href="{{ path('infos') }}">INFOS PRATIQUES</a>
 			</div>
 		</nav>
 	</header>
@@ -44,12 +44,13 @@
 				<a href="#">Billeterie</a>
 			</li>
 			<li>
-				<a href="#">Infos pratiques</a>
+				<a href="{{ path('infos') }}">Infos pratiques</a>
 			</li>
 		</ul>
 	</div>
 
 	<h1>Billeterie</h1>
+
 
 	<div class="shopping">
 		<iframe id="haWidget" allowtransparency="true" scrolling="none" src="https://www.helloasso.com/associations/deathless-record/evenements/spring-concert-1/widget" style="width:100%; height: 1050px; border: none;"></iframe>

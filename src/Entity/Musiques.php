@@ -16,7 +16,7 @@ class Musiques
     #[ORM\Column(length: 255)]
     private ?string $playlist = null;
 
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\ManyToOne(cascade: ['persist', 'remove'])]
     private ?Artistes $id_Artistes = null;
 
     public function getId(): ?int
